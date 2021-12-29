@@ -1,0 +1,12 @@
+E:\Private\Projects\TaxManager\TaxManager\bin\Debug\net5.0\TaxManager.deps.json
+E:\Private\Projects\TaxManager\TaxManager\bin\Debug\net5.0\TaxManager.dll
+E:\Private\Projects\TaxManager\TaxManager\bin\Debug\net5.0\ref\TaxManager.dll
+E:\Private\Projects\TaxManager\TaxManager\bin\Debug\net5.0\TaxManager.pdb
+E:\Private\Projects\TaxManager\TaxManager\obj\Debug\net5.0\TaxManager.csproj.AssemblyReference.cache
+E:\Private\Projects\TaxManager\TaxManager\obj\Debug\net5.0\TaxManager.GeneratedMSBuildEditorConfig.editorconfig
+E:\Private\Projects\TaxManager\TaxManager\obj\Debug\net5.0\TaxManager.AssemblyInfoInputs.cache
+E:\Private\Projects\TaxManager\TaxManager\obj\Debug\net5.0\TaxManager.AssemblyInfo.cs
+E:\Private\Projects\TaxManager\TaxManager\obj\Debug\net5.0\TaxManager.csproj.CoreCompileInputs.cache
+E:\Private\Projects\TaxManager\TaxManager\obj\Debug\net5.0\TaxManager.dll
+E:\Private\Projects\TaxManager\TaxManager\obj\Debug\net5.0\ref\TaxManager.dll
+E:\Private\Projects\TaxManager\TaxManager\obj\Debug\net5.0\TaxManager.pdb
