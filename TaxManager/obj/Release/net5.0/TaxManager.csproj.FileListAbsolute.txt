@@ -9,3 +9,4 @@ E:\Private\Projects\TaxManager\TaxManager\obj\Release\net5.0\TaxManager.csproj.C
 E:\Private\Projects\TaxManager\TaxManager\obj\Release\net5.0\TaxManager.dll
 E:\Private\Projects\TaxManager\TaxManager\obj\Release\net5.0\ref\TaxManager.dll
 E:\Private\Projects\TaxManager\TaxManager\obj\Release\net5.0\TaxManager.pdb
+E:\Private\Projects\TaxManager\TaxManager\obj\Release\net5.0\TaxManager.csproj.AssemblyReference.cache

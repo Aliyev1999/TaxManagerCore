@@ -273,34 +273,48 @@ namespace TaxManager
 
         private MBAResponse CheckShift()
         {
-            MBAResponse response = new MBAResponse();
-            var getShiftStatusResponse = tokenOperation.GetShiftStatus();
-            if (getShiftStatusResponse.IsSucces)
+            try
             {
-                if (getShiftStatusResponse.data.shift_open == true)
+                MBAResponse response = new MBAResponse();
+                var getShiftStatusResponse = tokenOperation.GetShiftStatus();
+                if (getShiftStatusResponse.IsSucces)
                 {
-                    if ((DateTime.Now - getShiftStatusResponse.data.ShiftOpenTime).TotalHours >= 24)
+                    if (getShiftStatusResponse.data.shift_open == true)
                     {
-                        response.Mesage = "The shift should not be open for more than 24 hours.";
-                        response.IsSucces = false;
+                        if ((DateTime.Now - getShiftStatusResponse.data.ShiftOpenTime).TotalHours >= 24)
+                        {
+                            response.Mesage = "The shift should not be open for more than 24 hours.";
+                            response.IsSucces = false;
+
+                            return response;
+                        }
+                    }
+                    else
+                    {
+                        response = tokenOperation.OpenShift();
 
                         return response;
                     }
                 }
-                else
-                {
-                    response = tokenOperation.OpenShift();
 
-                    return response;
-                }
+                response.Mesage = getShiftStatusResponse.message;
+                response.IsSucces = getShiftStatusResponse.IsSucces;
+                response.StatusCode = getShiftStatusResponse.code;
+                response.ResponseString = JsonConvert.SerializeObject(getShiftStatusResponse);
+
+                return response;
             }
-
-            response.Mesage = getShiftStatusResponse.message;
-            response.IsSucces = getShiftStatusResponse.IsSucces;
-            response.StatusCode = getShiftStatusResponse.code;
-            response.ResponseString = JsonConvert.SerializeObject(getShiftStatusResponse);
-
-            return response;
+            catch (Exception e)
+            {
+                MBAResponse response = new MBAResponse()
+                {
+                    IsSucces = false,
+                    Mesage = "Internal Error",
+                    StatusCode = 500,
+                    ResponseString = e.Message.ToString(),
+                };
+                return response;
+            }
 
         }
 

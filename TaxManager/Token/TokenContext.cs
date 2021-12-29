@@ -29,7 +29,6 @@ namespace TaxManager.Token
 
         private string ExecuteRequest(string message)
         {
-
             using (var client = new RequestSocket())
             {
                 client.Connect(TaxAccess.Token.TokenAddress);
