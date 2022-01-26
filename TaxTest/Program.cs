@@ -9,7 +9,7 @@ namespace TaxTest
     {
         static void Main(string[] args)
         {
-            TaxOperation operation = new TaxOperation(AppDomain.CurrentDomain.BaseDirectory + "TokenConfig.json");
+            TaxOperation operation = new TaxOperation(AppDomain.CurrentDomain.BaseDirectory + "TokenConfi.json");
 
             var Items = new List<DocumentItem>();
 
